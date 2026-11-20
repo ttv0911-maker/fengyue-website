@@ -1,0 +1,37 @@
+/* The fabrication composition scales as a single layout; all upper images share a baseline. */
+.collage{height:auto;aspect-ratio:1360/1064}
+.collage .machine,.collage .warehouse,.collage .kitchen{top:auto;bottom:48.6842%;height:auto}
+.collage .machine{left:9.5%;width:31.9%}.collage .warehouse{left:43%;width:22.5%}.collage .kitchen{right:0;width:33.9%}
+.collage .inspection{top:52.6316%;left:18.6%;width:62.5%;height:auto}
+.fabrication{padding-bottom:24px}
+/* Each process row stays within its own section, including its scroll cover. */
+.process{position:relative;isolation:isolate;padding:30px 0 100px}
+.process h2{margin-bottom:72px}
+.process-rows{position:relative;isolation:isolate;clip-path:inset(0)}
+.process-rows>.process-row{position:relative;display:grid;grid-template-columns:16% 55% 29%;align-items:start;gap:0;min-height:116px;padding:24px 0;border-top:1px solid #afb5ad;border-bottom:0;background:var(--sage)}
+.process-rows>.process-row:last-child{border-bottom:1px solid #afb5ad}
+.process-rows>.process-row:first-child{border-top:1px solid #afb5ad}
+.process-row>span,.process-row>h3{font-size:clamp(32px,4.3vw,62px);line-height:1.15}
+.process-row>p{padding-top:3px;color:#646a63;font-size:16px;line-height:1.4}
+.process-row.stack-covered>p{visibility:hidden}
+.project-contact{position:relative;isolation:isolate;overflow:hidden;min-height:0;align-items:stretch}
+.map{display:block;aspect-ratio:833/848;min-height:100%}.map img{height:100%;width:100%;object-fit:cover}
+.contact-panel{min-width:0;padding:62px 13% 35px 11%}.contact-panel h2{white-space:normal}
+.contact-info>p:not(.follow){display:flex;align-items:flex-start;gap:12px}
+.contact-icon{width:29px;height:29px;background:#dedfdd;border-radius:50%;display:grid;place-items:center;flex-shrink:0;color:#252323}
+.contact-icon svg{width:18px;height:18px}
+.social{display:flex;align-items:center;gap:16px;margin-top:18px}
+.social button{display:grid;place-items:center;width:25px;height:28px;padding:0;border:0;background:none;color:#252323}
+.social svg{width:25px;height:25px}.social button:hover{color:var(--accent)}
+.stats strong{font-variant-numeric:tabular-nums}
+.catalog{padding-top:76px}.catalog-filters{position:relative;z-index:3;display:grid;grid-template-columns:1.4fr .7fr .7fr 1.65fr;min-height:76px;border-top:1px solid var(--line,#d5d8d0);border-bottom:1px solid #d5d8d0;background:#fff}
+.color-filter{position:relative}.color-trigger,.status-filter{display:flex;align-items:center;justify-content:center;gap:16px;width:100%;height:100%;min-height:76px;background:none;border:0;border-right:1px solid #d5d8d0;color:var(--ink);font-size:17px}
+.selected-colour{font-size:13px;color:var(--muted)}.chevron{font-size:23px;line-height:1}.status-filter[aria-pressed=true]{color:white;background:var(--forest)}
+.color-trigger[aria-expanded=true]{background:#f3f4ef}.color-options{position:absolute;top:100%;left:0;min-width:330px;max-width:90vw;padding:28px;background:#fff;border:1px solid #d5d8d0;box-shadow:0 12px 24px #0000000c}
+.color-options fieldset{border:0;padding:0;margin:0;display:grid;gap:12px}.color-options legend{padding:0;margin-bottom:22px;font-size:20px}.color-options label{display:flex;align-items:center;gap:12px;cursor:pointer;padding:5px 0}.color-options input{accent-color:var(--forest)}.swatch{width:25px;height:25px;display:inline-block;border-radius:50%;border:1px solid #c5c8c0}.swatch.all{background:conic-gradient(#f2f1ed,#c0beb6,#393a37,#f2f1ed)}.white-stone{background:#f2f1ed}.swatch.beige{background:#d9cdb9}.swatch.grey{background:#a4a69f}.swatch.black{background:#282a27}
+.catalog-search{display:flex;align-items:center;gap:14px;padding:14px 25px}.catalog-search svg{flex-shrink:0}.catalog-search input{border:0;outline:0;min-width:0;width:100%;padding:8px 0;background:none;color:var(--ink);font-size:15px}.catalog-search:focus-within{box-shadow:inset 0 -2px var(--accent)}
+.filter-summary{display:flex;align-items:center;justify-content:space-between;min-height:72px;color:var(--muted);font-size:13px}.reset-filters{border:0;background:none;padding:10px 0;color:var(--accent);text-decoration:underline;text-underline-offset:4px}.catalog-empty{padding:80px 0;text-align:center;color:var(--muted)}.stone[hidden],.catalog-empty[hidden],.reset-filters[hidden],.pagination[hidden],.color-options[hidden]{display:none}
+@media(prefers-reduced-motion:no-preference){.process-rows>.process-row{position:sticky;top:var(--stack-top,16px)}.process-rows>.process-row::after{content:'';position:absolute;top:100%;left:0;right:0;height:max(100svh,var(--stack-cover,200px));background:var(--sage);pointer-events:none}}
+@media(max-width:1050px){.collage{height:auto}.process-rows>.process-row{grid-template-columns:14% 51% 35%}.process-row>p{font-size:14px}.contact-panel{padding:40px 9%}.project-form{gap:24px}.contact-panel h2{margin-bottom:36px}}
+@media(max-width:700px){.collage{display:grid;aspect-ratio:auto;grid-template-columns:1fr 1fr;gap:12px}.collage p{grid-column:1/-1;position:static}.collage .machine,.collage .warehouse,.collage .kitchen,.collage .inspection{position:static;width:100%;height:auto}.collage .machine{grid-column:1;grid-row:3}.collage .kitchen{grid-column:1;grid-row:2}.collage .warehouse{grid-column:2;grid-row:2/4}.collage .inspection{grid-column:1/-1}.process{padding:35px 0 55px}.process h2{margin-bottom:32px}.process-rows>.process-row{grid-template-columns:54px 1fr;min-height:0;padding:22px 0;gap:8px}.process-row>span,.process-row>h3{font-size:30px}.process-row>p{grid-column:2;font-size:14px}.map{height:auto;aspect-ratio:833/640;min-height:0}.contact-panel{padding:40px 7%}.social svg{width:24px;height:24px}.catalog-filters{grid-template-columns:1.4fr .8fr .8fr}.catalog-search{grid-column:1/-1;min-height:64px;border-top:1px solid #d5d8d0;padding:12px 18px}.color-trigger,.status-filter{min-height:64px;font-size:15px;gap:8px}.selected-colour{display:none}.catalog{padding-top:40px}.color-options{min-width:280px}.filter-summary{min-height:60px}}
+@media print{.process-rows>.process-row{position:relative!important;translate:none!important}.process-rows>.process-row::after{display:none}.process-row.stack-covered>p{visibility:visible}}

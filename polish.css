@@ -1,0 +1,30 @@
+/* Compact form: the form sets the row height and the map fills that space. */
+.project-contact{min-height:0;align-items:stretch}
+.project-contact>.map{position:relative;aspect-ratio:auto;min-height:0;height:auto}
+.project-contact>.map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.project-contact>.contact-panel{padding-top:44px;padding-bottom:36px}
+.project-contact .contact-panel h2{margin-bottom:32px}
+.project-contact .project-form{gap:24px}
+.project-contact .project-form textarea{min-height:140px}
+.project-contact .project-form .form-status:empty{display:none}
+/* Section headings share one slightly larger, stronger hierarchy. */
+.featured>h2,.fabrication-head>h2,.process>.wrap>h2,.machines>h1,.production>.wide-wrap>h2,.services>.wrap>h2,.certificates>h2,.ecosystem>.wide-wrap>h2,.related>.wrap>h2,.location-backdrop>h2{font-size:clamp(32px,3.55vw,52px);font-weight:600;letter-spacing:-.025em;line-height:1.16}
+.journey-card h2,.showcase-copy h3{font-weight:600;letter-spacing:-.015em}
+.contact-panel h2,.contact-form-column h1{font-weight:600;letter-spacing:-.02em}
+.product-information h1{font-weight:500}
+/* Flat, square CTAs use the proportions of the supplied Cosentino reference. */
+.button,.quote-form .button,.contact-enquiry>.button,.project-banner .button{border:1px solid var(--accent);border-radius:0;background:var(--accent);color:#fff;font-size:16px;font-weight:400;line-height:1.25;letter-spacing:0;padding:15px 28px;min-height:50px;gap:0;transition:background .2s,color .2s,border-color .2s;transform:none}
+.button .arrow{display:none}
+.button:hover,.quote-form .button:hover,.contact-enquiry>.button:hover{background:#873a1b;border-color:#873a1b;color:#fff;transform:none}
+.button.white{background:#fff;border-color:#fff;color:#232323}
+.button.white:hover{background:#eeeee8;border-color:#eeeee8;color:#232323}
+.button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+/* A drawn chevron stays centred at every font size. */
+.color-trigger{gap:14px}
+.color-trigger .chevron{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;flex:0 0 16px;line-height:0;transition:transform .2s}
+.chevron svg{width:14px;height:14px;display:block}
+.color-trigger[aria-expanded=true] .chevron{transform:rotate(180deg)}
+.showcase-copy{overflow-wrap:anywhere}
+.showcase-card.caption-host .showcase-copy{min-width:0}
+@media(max-width:700px){.project-contact>.map{height:350px}.project-contact>.contact-panel{padding:35px 7%}.project-contact .project-form{gap:22px}.project-contact .contact-panel h2{margin-bottom:28px}.button,.quote-form .button,.contact-enquiry>.button,.project-banner .button{font-size:15px;padding:13px 23px;min-height:46px}.featured>h2,.fabrication-head>h2,.process>.wrap>h2,.machines>h1,.production>.wide-wrap>h2,.services>.wrap>h2,.certificates>h2,.ecosystem>.wide-wrap>h2,.related>.wrap>h2,.location-backdrop>h2{font-size:32px}.showcase-card.active.caption-host .showcase-copy{visibility:visible;opacity:1}.color-trigger{gap:10px}}
+@media(prefers-reduced-motion:reduce){.button,.chevron{transition:none}}
