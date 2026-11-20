@@ -1,0 +1,12 @@
+FENGYUE STONE WEBSITE
+
+Open index.html to preview the website, or serve this folder with any static web server.
+No package installation or build step is required.
+Keep the assets folder beside the HTML files.
+
+This is a design review copy. Forms currently provide front-end interactions and need a real submission service before launch.
+Policy and terms pages contain placeholder text pending Fengyue approval.
+Search engine indexing remains disabled in this review copy (robots.txt and noindex metadata).
+Product sample names/specifications and certificates require final business confirmation.
+
+Do not publish as an official production website until content, forms, policies and indexing settings have been approved.
